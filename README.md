@@ -1,12 +1,16 @@
 # SLS - Simple Logistical System
 
-#### Video Demo:  https://www.youtube.com/watch?v=pSxkruwjchE
+## Video Demo:  https://www.youtube.com/watch?v=pSxkruwjchE
 
-#### Description: A simple logistical system that has the ability to create, edit, show, search (with multiple criteria) and remove items of three possible categories. It also has the capability to create and showcase useful reports, having fully implemented account features (login, creation and removal) as well as a complete a intuitive manual and various security/quality of life implementations. The user can control usage by having access to two different types of accounts, limited (Only vizualization) and admin (all features).
+## Description: 
+
+A simple logistical system that has the ability to create, edit, show, search (with multiple criteria) and remove items of three possible categories. It also has the capability to create and showcase useful reports, having fully implemented account features (login, creation and removal) as well as a complete a intuitive manual and various security/quality of life implementations. The user can control usage by having access to two different types of accounts, limited (Only vizualization) and admin (all features).
+
+Made entirely in C.
 
 # DOCUMENTATION
 
-# FILES 
+## FILES 
 
 A one by one analisis of all the files present at the project.
 
@@ -36,6 +40,12 @@ This function traverses an hash table wich has all employees (present at databas
 This function traverses an hash table wich has all products (present at database) loaded. For every product found, an increment variable goes up one. At last, the function returns the resulting integer.
 
 ###### int count_numerical_quantity_dealer()
+
+This function traverses an hash table wich has all dealers (present at database) loaded. For every dealer found, an increment variable goes up one. At last, the function returns the resulting integer.
+
+###### float calculate_total_money_amount_employee()
+
+This function converts all information present at the database regarding employee salaries from string to float (using atoi() function). It, them, calculates the total value of all salaries combined with a addition operation.
 
 
 
