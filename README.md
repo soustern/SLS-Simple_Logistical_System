@@ -6,7 +6,7 @@
 
 A simple logistical system that has the ability to create, edit, show, search (with multiple criteria) and remove items of three possible categories. It also has the capability to create and showcase useful reports, having fully implemented account features (login, creation and removal) as well as a complete a intuitive manual and various security/quality of life implementations. The user can control usage by having access to two different types of accounts, limited (Only vizualization) and admin (all features).
 
-SLS puts great enphasis in user friendly design, best practices, security and control. This allows a very gentle leraning curve and the possibility of hierarquy in its usage.
+SLS puts great enphasis in user friendly design, best practices, security and control. This allows a very gentle leraning curve and the possibility of hierarchy in its usage.
 
 Made entirely in C language.
 
@@ -435,6 +435,113 @@ The file is, then, closed an reopened again in append ("a") mode (This makes sur
 ###### void edit_employee()
 
 The same "Modus operandi" of "remove_dealer", but, insted of removing, it prompts the user to write new information concerning that specific item (If a match occurs, that is).
+
+## functions_general.c
+
+In this file, functions, hashtables and global variables that are used in both types of accounts are located. 
+
+Quality of life components are also present.
+
+###### void clear()
+
+Simple function that can clear the terminal screen.
+
+###### void boilerplate()
+
+Calls clear() and proceeds to print on-screen usual boilerplate that is present in (almost) every screen.
+
+###### bool check_lenght(char *credential)
+
+Function responsible to check if a give credential is of correct lenght, returning true if so and false otherwise.
+
+###### bool check_password(char *password, char *password)
+
+Receives a password and a confirmation, checks if both are equal matching each character of the array. At each match, a increment variable goes up.
+
+In the end, if the value of increment is equal to the lenght of the original password (strlen(password)), true is returned, false otherwise.
+
+###### void press_to_continue()
+
+Function responsible to wait until the user presses enter to escape an while loop.
+
+###### bool load_account_databases()
+
+This function has the important task of reading all data present at the account database file, storing is data in a buffer (using fgets()) and coping the buffer content to the correct place in node pointer of type "account" (strcpy function is used to achieve this).
+
+At the end, all opened files are closed and all allocated is freed. The function returns true if no "return false" condition is met (normally this may happen at the moment a file is opened or a chunck of memory is allocated.
+
+###### int hash_index(char *subject)
+
+Receives a subject and returns a hash value based on that.
+
+Makes sure the returned number does not surpass the constant value of MINTABLESIZE.
+
+###### void login()
+
+Checks database to check if given credentials exists.
+
+It also checks the type of the given account and routes accordingly.
+
+At this function, the global variables:
+
++ char current_account[MAXMAXSIZE]
++ char current_account_type[MAXMAXSIZE]
+
+Both receives the associated information to keep track of what account is currently being used (strcpy() is used to copy from input to the variables).
+
+###### bool check_login()
+
+Function responsible to comparing values at hashtable with given credential (case sensitive: strcmp()), returning true if a password and username match occurs.
+
+This functions uses the hash_index() function to receive an array index jump to the correct location at the corresponding hashtable instantly.
+
+###### bool check_username(char *username)
+
+Receives an username ans checks if it already exists in the database (using strcmp), returning false if so.
+
+###### bool unload_account_databases()
+
+Navigates the hash table properly freeing its content.
+
+###### void menu_show_items()
+
+Menu exposing all options avaible at the "view items" tool.
+
+Calls answer_show_items() at the end.
+
+###### void answer_show_items()
+
+Multiple switch case condition nested onto each other to deal with the complexity of "search" and "view all" tools. 
+
+Ordinary answer router.
+
+###### bool check_if_current_account(char *username)
+
+Receives an username and see if it matches with the value present at "char current_account[MAXMAXSIZE]" global array.
+
+If so, that means the username is already being used, false is returned.
+
+###### bool remoce_account()
+
+Ordinary removal from database.
+
+###### void menu_manual_admin() and menu_manual_limited()
+
+redundantly segregated functions ta print the same menu, but call different functions at the end.
+
+###### void answer_manual_admin() and answer_manual_limited()
+
+Answer routers tha have the diffence of returning to different menus when done.
+
+###### int check_account_type()
+
+This function returns 1 if the value present at "char current_account_type[MAXMAXSIZE]" is equal to "limited" (strcmp() is used to achieve this).
+
+0 is returned if account type is "admin"
+
+###### void report()
+
+Receives report information and prints it in a formated and organized manner.
 
 
 
