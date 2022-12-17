@@ -543,6 +543,35 @@ This function returns 1 if the value present at "char current_account_type[MAXMA
 
 Receives report information and prints it in a formated and organized manner.
 
+## functions_limited.c
+
+Contains only a handfull of functions that are used only at accounts of "limited" type.
+
+###### void menu_limited()
+
+Prints a menu that showcase the available tools at an limited account.
+
+Calls answer_limited() at the end.
+
+###### void anser_limited()
+
+Ordinary answer router.
+
+## sls.c
+
+File responsible for kickstaring the program and "gluing" all togheter
+
+I has a mani() function that open the "session_counter.txt" file and see if this is the first time SLS is being executed at that computer of not.
+
+If thats the first time, it calls bot newcomer_message_first(), signup_admin() and newcomer_message_second() (in this order) end with menu_admin() (hopefully the function names are self-explanatory).  
+
+If thats not the first time, it straight up call login().
+
+## tutorials.c
+
+This file contains functions that have the purpose of print a menu, an ordinary answer router and an assortment of userful information (manual and newcomer messages).
+
+
 
 
 
