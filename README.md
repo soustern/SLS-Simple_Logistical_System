@@ -16,6 +16,140 @@ This README goes trough a comprehensible transcript of the program manual, servi
 
 It, then, delves into a feature rich documentation wich details and explains in depth each file, function and choice made during the creation of SLS.
 
+# MANUAL: HOW TO USE
+
+The following content is a compilation of transcripts taken from the official SLS manual.
+
+## ACCOUNTS
+
+In SLS version 1.0, there are two types of accounts. 
+
+
+###### Admin
+
+These accounts have full access to SLS features. 
+
+Accounts with this profile are able to add new items to the system as well as view, edit and delete them.
+
+It is only possible to register new accounts to the system with the features of an admin account.
+
+###### Limited
+
+These accounts have access only to the tools for viewing, searching items and reports.
+
+You can access the manual with both account types.
+
+## FIRST STEPS
+
+If this is the first time you are using the system, the current loged account is of "ADMIN" type.
+
+This means all system functionalities are currently available.
+The first Step is adding a new item.
+
+SLS 1.0 has three different 'modalities' of items that can be registered:
+
++ 1 - PRODUCT
++ 2 - PROVIDER
++ 3 - EMPLOYEE
+
+## ITEM MODALITIES
+
+###### Products
+
+Items in the 'PRODUCT' format have the following categories:
+
+**Name:** A generic name assigned to the product.
+
+**Quantity:** Generic assignment to the quantity of the product
+referring to the criterion used to measure it.
+It is possible that the quantity refers to a unit value
+or a value in meters, centimeters, etc.
+In any case, you must assign only an integer
+and not say anything else.
+Correct: 2 | Wrong: 2cm
+
+**Unit value:** Specification of how much each unit of the product is worth.
+This information must comply with the metric criteria that is used
+in particular for different types of products.
+Ex: If I inform you that the unit value of a copper wire is 2.00
+I will be informing you that they are 2.00 every 10 cm.
+
+**Total value:** Product of multiplying the quantity and unit value of the product.
+
+###### Providers
+
+Items in the 'SUPPLIER' format have the following categories:
+
+**Name:** A generic name assigned to the product.
+
+**Owner name:** Name of the person who is responsible for
+communication and/or intermediation at the time of contact.
+
+**City:** Where the supplier is located.
+
+**Type of service:** Generic assignment to the type of service that"
+that that supplier offers.
+Ex: Builder, Electrician, Construction materials and etc.
+
+**Contact:** Supplier contact number."
+
+**Email:** Supplier contact email.
+
+###### Employees
+
+Items in the 'EMPLOYEE' format have the following categories:
+
+**Name:** Name of the employee.
+
+**Position:** Position/Area of activity of the employee.
+
+**Salary:** Employee's salary amount.
+Real numbers must represent the places after the comma separated
+by the character '.'
+
+**Hire Date:** Date when the employee was hired/hired.
+
+## CREATING AN ITEM
+
+To register an item just type the key '1
+and press ENTER.
+
+From this moment on, the following options will appear on the screen:
+
++ 1 - Register PRODUCT
++ 2 - Register SUPPLIER
++ 3 - Register EMPLOYEE
+
+By typing the number referring to the type of item that must be registered"
+and press ENTER, a new screen will appear and will ask to be typed"
+the information referring to the specified category."
+Ex: City: (The user must type the city referring to that item).
+
+## VIEWING AN ITEM
+
+To view an item, simply type the number referring to the 'View Item' tool"
+and press ENTER.
+
+From this moment on, the following options will appear on the screen:
+
++ 1 - View PRODUCT
++ 2 - View SUPPLIER
++ 3 - View EMPLOYEE
+
+By typing the number referring to the product modality that must be registered
+and press ENTER, a new screen will appear and will ask to be selected
+a visualization mode.
+
+In SLS 1.0, you can select two views:
+
+**View all:** In this mode, the program will display all items on the screen"
+of that modality present in the respective database"
+without any specific sequence.
+
+**Search:** In this mode, it will be possible to select a list of options,
+specific to the selected item modality, and enter a related search
+that criterion that will return one or more items
+(A specific message will be displayed if no item is found in the search).
 
 # DOCUMENTATION
 
